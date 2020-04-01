@@ -11,6 +11,8 @@
     width: 100%;
     border: 1px solid $defaultGray;
     border-radius: 5px;
+    font-family: inherit;
+    font-weight: $fontRegular;
     font-size: $more-small;
     color: $mainBlack ;
     line-height: 24px;
@@ -56,6 +58,8 @@
     border: 1px solid $defaultGray;
     border-radius: 5px;
     font-size: $more-small;
+    font-family: inherit;
+    font-weight: $fontRegular;
     color: $mainBlack ;
     line-height: 24px;
     text-align: center;
@@ -136,6 +140,7 @@
         line-height: 34px;
         color: $defaultBlue;
         text-align: center;
+        cursor: pointer;
 
         &:hover {
           cursor: pointer;

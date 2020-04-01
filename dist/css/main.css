@@ -116,6 +116,9 @@ h3 {
   font-size: 30px;
   line-height: 1.2; }
 
+span, p, div, button {
+  font-family: inherit; }
+
 .noscroll {
   position: fixed;
   width: 100%;
@@ -125,13 +128,16 @@ h3 {
 .mCustomScrollBox {
   height: auto !important; }
 
+.mCSB_draggerRail {
+  background-color: transparent !important; }
+
 .mCSB_dragger {
-  max-width: 200px !important; }
+  max-width: 4px !important; }
   .mCSB_dragger_bar {
-    max-width: 200px !important;
-    height: 8px !important;
-    background-color: #FFE600 !important;
-    border-radius: 4px !important; }
+    max-width: 4px !important;
+    height: 121px !important;
+    background-color: #D9D9D9 !important;
+    border-radius: 2px !important; }
 
 .headers--thin {
   font-weight: 100; }
@@ -207,6 +213,8 @@ h3 {
     width: 100%;
     border: 1px solid #e5e5e5;
     border-radius: 5px;
+    font-family: inherit;
+    font-weight: 400;
     font-size: 20px;
     color: #1c1c1c;
     line-height: 24px;
@@ -242,6 +250,8 @@ h3 {
     border: 1px solid #e5e5e5;
     border-radius: 5px;
     font-size: 20px;
+    font-family: inherit;
+    font-weight: 400;
     color: #1c1c1c;
     line-height: 24px;
     text-align: center;
@@ -310,7 +320,8 @@ h3 {
         font-size: 20px;
         line-height: 34px;
         color: #435993;
-        text-align: center; }
+        text-align: center;
+        cursor: pointer; }
         .form__dropdown-body-item:hover {
           cursor: pointer; }
     .form__dropdown--toggle {
@@ -483,7 +494,8 @@ h3 {
   #slider-range #mask {
     position: absolute;
     z-index: 300;
-    fill: #fff; }
+    fill: #fff;
+    stroke: #fff; }
 
 .ui-slider .ui-slider-handle {
   z-index: 300;

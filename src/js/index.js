@@ -101,6 +101,16 @@ $(document).ready(function () {
     $('html, body').animate({scrollTop: $(this.hash).offset().top - 50}, 500);
     return false;
   });
+
+  $('.form__dropdown-body').mCustomScrollbar({
+    axis:"y",
+    theme:"dark",
+    scrollInertia: 50,
+    snapAmount: 1,
+    snapOffset: 1,
+    mouseWheel:{ scrollAmount: 100 },
+    
+  });
   
 
   /* init */
