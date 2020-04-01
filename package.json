@@ -1,0 +1,24 @@
+{
+  "name": "Builder",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "gulp dev"
+  },
+  "dependencies": {
+    "bemto.pug": "^2.1.0",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-pug": "^4.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "pug": "^2.0.3"
+  },
+  "devDependencies": {
+    "gulp-inline-css": "^3.3.2"
+  }
+}

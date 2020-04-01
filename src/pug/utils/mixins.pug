@@ -1,0 +1,48 @@
+mixin navItem(item)
+  a(href= item.href class= item.className).nav__item= item.title
+
+mixin mobileItem(item)
+  a(href= item.href class= item.className).mobile-menu__item= item.title 
+
+mixin svgIcon(id, className)
+  svg(class= className)
+    use(xlink:href= '#'+id)
+
+mixin formInput(item, className)
+  .form__input-wrapper(class= className)
+    input(type="text" id= item.id autocomplete="off" value= item.value).form__input
+    label(for= item.id).form__input-placeholder= item.placeholder
+
+mixin formTextarea(item, className)
+  .form__textarea-wrapper(class= className)
+    textarea(id= item.id).form__textarea= item.value
+    label(for= item.id).form__textarea-placeholder= item.placeholder 
+
+mixin ddItem(title)
+  span.form__dropdown-body-item= title 
+
+mixin dropdown(item)
+  .form__dropdown
+    .form__dropdown-header
+      button(type="button").form__dropdown--toggle
+        span.form__dropdown-placeholder= item.title
+        span.form__dropdown-text
+        svg.form__dropdown-icon.icon--vsmall 
+          use(xlink:href="#angle")
+    .form__dropdown-body
+      each title in item.items
+        +ddItem(title)
+
+mixin checkbox(checked, title, className)
+
+  label(class= className).form__checkbox-wrapper
+    if checked
+      input(type="checkbox" checked).form__checkbox
+    else
+      input(type="checkbox").form__checkbox
+
+    span.form__checkbox-text= title
+
+mixin scaleItem(title)
+  .slider-range-scale-item
+    span= title

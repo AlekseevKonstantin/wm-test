@@ -1,0 +1,75 @@
+@media (max-width: 991.98px) {
+
+  .page-header {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .form {
+    padding-left: 20px;
+    padding-right: 20px;
+  
+    &__input {
+      font-size: 18px;
+    }
+
+    &__textarea {
+      font-size: 18px;
+    }
+
+    &__dropdown-text {
+      font-size: 18px !important;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .page-header { 
+    
+    height: 56px;
+  }
+
+  .form {
+    &__input {
+      font-size: 15px;
+    }
+
+    &__textarea {
+      font-size: 15px;
+    }
+
+    &__dropdown{
+      max-width: 520px;
+
+      &-text {
+        font-size: 15px !important;
+      }
+    }
+  }
+
+  .experience, .js {
+    margin-bottom: 74px;
+  }
+
+}
+
+@media (max-width: 575.98px) {
+
+  .slider-range-scale-item > span {
+    font-size: 10px;
+  }
+
+}
+
+@media (max-width: 375.98px) {
+
+  .slider-range-scale-item > span {
+    font-size: 8px;
+  }
+
+}

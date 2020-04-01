@@ -1,0 +1,89 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/reset";
+
+
+html {
+  font-family: $mainFont;
+  line-height: $mainLineHeight;
+	font-size: $mainFontSize;
+	color: $mainFontColor;
+  height: 100%;
+  
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: $mainFont;
+	font-size: $mainFontSize;
+  font-weight: $mainFontWeight;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*, *:before, *:after { box-sizing: border-box; }
+
+#app {
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+h2 {
+  color: $defaultBlack;
+  font-size: 70px;
+  line-height: 46px;
+}
+
+h3 {
+  color: $defaultBlack;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.noscroll{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mCustomScrollBox {
+  height: auto !important;
+}
+
+.mCSB_dragger{
+  max-width: 200px !important;
+  &_bar {
+    max-width: 200px !important;
+    height: 8px !important;
+    background-color: $defaultYellow !important;
+    border-radius: 4px !important;
+  }
+}
+
+// html { scroll-behavior: smooth; } 
+
+@import "modules/headers";
+@import "modules/header";
+@import "modules/footer";
+@import "modules/content";
+@import "modules/nav";
+@import "modules/banner";
+@import "modules/icons";
+@import "modules/form";
+@import "modules/btn";
+@import "modules/text";
+@import "modules/other";
+@import "modules/mobile-menu";
+
+@import "utils/grid";
+@import "modules/media";
+
+
+
+

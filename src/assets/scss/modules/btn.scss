@@ -1,0 +1,23 @@
+.btn {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  font-size: 16px;
+  padding: 16px 32px;
+  
+
+  &-fill {
+    &--blue {
+      color: $defaultWhite;
+      background-color: $defaultBlue;
+      border-radius: 10px;
+    }
+  }
+
+  &--simple {
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+  }
+}

@@ -1,0 +1,46 @@
+include ../../utils/mixins
+
+- 
+  var navItems = [
+    {
+      title: 'Личная информация',
+      className: 'active smooth-goto',
+      href: '#infol'
+    },
+    {
+      title: 'Опыт',
+      className: 'smooth-goto',
+      href: '#experiencel'
+    },
+    {
+      title: 'JavaScript',
+      className: 'smooth-goto',
+      href: '#jsl'
+    },
+    {
+      title: 'О себе',
+      className: 'smooth-goto',
+      href: '#aboutl'
+    }
+  ];
+
+header.page-header
+  nav.nav.hidden-sm
+    each item in navItems
+      +navItem(item)
+
+  .row.row--align-center.row--end.h100p.hidden.visible-flex-sm
+    button(type="button").btn.btn--simple.mobile-menu--open
+      +svgIcon('burger', 'icon--small')
+
+  .mobile-menu-wrapper
+    .mobile-menu
+      button(type="button").btn.btn--simple.mobile-menu--close
+        
+      each item in navItems
+        +mobileItem(item)
+  
+
+  
+
+  

@@ -1,0 +1,9 @@
+.text {
+  font-size: 16px;
+  font-weight: $fontLight;
+  color: $mainBlack;
+
+  &--center {
+    text-align: center;
+  }
+}

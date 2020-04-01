@@ -1,0 +1,178 @@
+extends ../layout/main
+
+block variables
+  - var title = 'page 404';
+  - var description = 'page 404';
+  - var pageClass = 'index-page';
+
+  - var contentClass = 'title-page' 
+  
+  - 
+    var inputs = [
+      {
+        id: '2',
+        placeholder: 'Место проживание',
+        value: 'г Екатеринбург'
+      },
+      {
+        id: '3',
+        placeholder: 'Skype',
+        value: 'myworkmailbox@list.ru'
+      },
+      {
+        id: '4',
+        placeholder: 'E-mail',
+        value: 'myworkmailbox@list.ru'
+      }
+    ]
+
+  - 
+    var input = {
+        id: '1',
+        placeholder: 'ФИО',
+        value: 'Алексеев Константин Владимирович'
+      }
+
+  - 
+    var dropdown = {
+      title: 'Год рождения',
+      items: ['2020', '2019', '2018', '2018', '2017', '2016', '2015', '2014', '2013']
+    }
+
+  - 
+    var checkboxes1 = [
+      {
+        checked: true,
+        title: 'БЭМ/OOCSS'
+      },
+      {
+        checked: true,
+        title: 'Stylus/LESS/SASS'
+      },
+      {
+        checked: true,
+        title: 'Работаю с SVG'
+      },
+    ]
+  
+  - 
+    var checkboxes2 = [
+
+      {
+        checked: true,
+        title: 'Верстаю семантично'
+      },
+      {
+        checked: true,
+        title: 'ES2015/ES2016'
+      },
+      {
+        checked: true,
+        title: 'Gulp/GRUNT'
+      },
+    ]
+  
+  - 
+    var checkboxes3 = [
+
+      {
+        checked: true,
+        title: 'Webpack'
+      },
+      {
+        checked: true,
+        title: 'jQuery'
+      },
+      {
+        checked: true,
+        title: 'Ипользую Git'
+      }
+
+    ]
+
+  - 
+    var textarea = {
+      id: 't1',
+      placeholder: 'Понравилась тем, что...',
+      value: 'Нахожусь в поиске работы, вашу вакансию рассматривал, как одну из многих. От сотрудничества с '+
+             'вами ожидаю интересных задач.'
+    }
+
+  - 
+    var scale = [
+      'Не владею', 
+      'Использую готовые решения', 
+      'Использую готовые решения и умею и переделывать', 
+      'Пишу сложный JS с нуля'
+    ]
+
+block content
+  .banner
+    h2.headers--thin Анкета
+
+  form.form 
+    #infol.info
+
+      +svgIcon('info', 'icon--normal mb-less-medium')
+
+      h3.headers--light.mb-more-medium Личная информация
+
+      +formInput(input)
+
+      +dropdown(dropdown)
+
+      each item in inputs
+        +formInput(item)
+
+    #experiencel.experience
+
+      +svgIcon('experience', 'icon--normal mb-less-medium')
+
+      h3.headers--light.mb-more-medium Расскажите о своем опыте
+
+      .row.row--flex-wrap.w100p
+        .form__checkbox-group.w36p.w50p-sm.w100p-xs.mb-less-small-sm
+          each item in checkboxes1
+            +checkbox(item.checked, item.title, '')
+
+        .form__checkbox-group.w36p.w50p-sm.w100p-xs.mb-less-small-sm
+          each item in checkboxes2
+            +checkbox(item.checked, item.title, '')
+
+        .form__checkbox-group.w50p-sm.w100p-xs
+          each item in checkboxes3
+            +checkbox(item.checked, item.title, '')
+
+    #jsl.js
+      +svgIcon('js', 'icon--normal mb-less-medium')
+
+      h3.headers--light.mb-more-medium Уровень владения JavaScript
+
+      #slider-range-wrapper
+        .slider-range-scale
+          each title in scale
+            +scaleItem(title)
+        #slider-range
+          svg(height="100%" width="100%" viewBox="0 0 770 14" preserveAspectRatio="none" stroke="transparent")#mask
+            polygon(points="0,0 770,0 0,12" class="triangle")
+
+    #aboutl.about
+      //- a(name="aboutl")
+      +svgIcon('about', 'icon--normal mb-less-medium')
+
+      h3.headers--light.mb-less-small Расскажите о себе
+
+      p(style={'max-width' : '500px'}).text.text--center.mb-medium.
+        Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.
+      
+      +formTextarea(textarea, 'mb-more-big')
+
+      button(type="button").btn.btn-fill--blue Готово
+    
+    
+
+
+
+  
+  
+    
